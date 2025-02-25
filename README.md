@@ -1,4 +1,4 @@
-# NeoVim RC
+# My RC
 
 *** prerequisites ***
 
@@ -7,5 +7,5 @@ brew install neovim # duh
 ```
 
 ```sh
-brew install ripgrep #Speed up file search
+brew install ripgrep # Speed up file search
 ```
