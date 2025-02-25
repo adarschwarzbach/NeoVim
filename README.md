@@ -1,1 +1,1 @@
-# Adar's NeoVim RC
+# NeoVim RC
