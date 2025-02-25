@@ -1,28 +1,9 @@
 vim.g.mapleader = " "
 
-
-
 local function map(mode, lhs, rhs)
   vim.keymap.set(mode, lhs, rhs, { silent = true })
 end
 
-
--- Telescope --
-vim.keymap.set("n", "<leader>ff", function()
-  require("telescope.builtin").find_files()
-end, { desc = "Find Files" })
-
-vim.keymap.set("n", "<leader>fg", function()
-  require("telescope.builtin").live_grep()
-end, { desc = "Live Grep" })
-
-vim.keymap.set("n", "<leader>fb", function()
-  require("telescope.builtin").buffers()
-end, { desc = "Find Buffers" })
-
-vim.keymap.set("n", "<leader>fh", function()
-  require("telescope.builtin").help_tags()
-end, { desc = "Help Tags" })
 
 -- Save
 map("n", "<leader>w", "<CMD>update<CR>")
@@ -52,5 +33,22 @@ map("n", "<C-Left>", "<C-w>>")
 map("n", "<C-Up>", "<C-w>+")
 map("n", "<C-Down>", "<C-w>-")
 
--- Close current window
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- Close current windows
+map("n", "<leader>pv", vim.cmd.Ex)
+
+-- Telescope --
+vim.keymap.set("n", "<leader>ff", function()
+  require("telescope.builtin").find_files()
+end, { desc = "Find Files" })
+
+vim.keymap.set("n", "<leader>fg", function()
+  require("telescope.builtin").live_grep()
+end, { desc = "Live Grep" })
+
+vim.keymap.set("n", "<leader>fb", function()
+  require("telescope.builtin").buffers()
+end, { desc = "Find Buffers" })
+
+vim.keymap.set("n", "<leader>fh", function()
+  require("telescope.builtin").help_tags()
+end, { desc = "Help Tags" })
