@@ -1,2 +1,3 @@
 require("adarschwarzbach.remap")
-print("Hello vim")
+require("adarschwarzbach.lazy_init")
+require("adarschwarzbach.set")
