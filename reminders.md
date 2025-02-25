@@ -29,3 +29,9 @@ Defualt:
 
 Default:
 - **:G**: same as git in a bash terminal
+
+
+
+# Sources
+- https://github.com/slydragonn/nvim-lazy/tree/main 
+- https://github.com/ThePrimeagen/neovimrc/tree/master
