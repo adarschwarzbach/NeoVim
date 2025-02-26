@@ -12,6 +12,10 @@ map("n", "<leader>w", "<CMD>update<CR>")
 map("n", "<leader>q", "<CMD>q<CR>")
 
 
+-- Clear highlights
+map("n", "<leader>c", "<cmd>nohlsearch<cr>")
+
+
 -- NeoTree
 map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
 map("n", "<leader>r", "<CMD>Neotree focus<CR>")
