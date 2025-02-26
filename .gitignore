@@ -1,4 +1,8 @@
 neovim/plugged/
+
 .env
+
 **/.DS_Store
+
+# For testing plugins
 playground.cpp
