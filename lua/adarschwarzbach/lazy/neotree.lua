@@ -6,6 +6,15 @@ return {
     "nvim-tree/nvim-web-devicons",
     "MunifTanjim/nui.nvim",
   },
+  keys = {
+    {
+      "<leader>e",
+      function()
+        vim.cmd("Neotree reveal")
+      end,
+      desc = "Reveal current file in Neo-tree",
+    },
+  },
   config = function()
     require("neo-tree").setup({
       filesystem = {
@@ -19,4 +28,3 @@ return {
     })
   end
 }
-
