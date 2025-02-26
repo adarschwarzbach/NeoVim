@@ -10,6 +10,13 @@ return {
     {
       "<leader>e",
       function()
+        vim.cmd("Neotree toggle")
+      end,
+      desc = "Toggle Neo-tree",
+    },
+    {
+      "<leader>er",
+      function()
         vim.cmd("Neotree reveal")
       end,
       desc = "Reveal current file in Neo-tree",
