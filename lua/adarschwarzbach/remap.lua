@@ -11,6 +11,9 @@ map("n", "<leader>w", "<CMD>update<CR>")
 -- Quit
 map("n", "<leader>q", "<CMD>q<CR>")
 
+-- Center half page jumps
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
 
 -- Clear highlights
 map("n", "<leader>c", "<cmd>nohlsearch<cr>")
