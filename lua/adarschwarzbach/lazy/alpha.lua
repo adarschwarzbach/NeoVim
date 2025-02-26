@@ -71,6 +71,7 @@ return {
       dashboard.section.buttons.val = {
         dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
         dashboard.button("r", "  > Recent Folders", ":lua open_recent_dirs()<CR>"),
+        dashboard.button("t", "  > Open Terminal", ":ToggleTerm<CR>"),
         dashboard.button("q", "  > Quit NVIM", ":qa<CR>")
       }
 

@@ -33,14 +33,12 @@ return {
         "eslint",
       },
       handlers = {
-        -- Default handler: all servers that don't have a dedicated handler below
         function(server_name)
           require("lspconfig")[server_name].setup({
             capabilities = capabilities,
           })
         end,
 
-        -- Lua LS custom config
         ["lua_ls"] = function()
           require("lspconfig").lua_ls.setup({
             capabilities = capabilities,
@@ -48,7 +46,6 @@ return {
               Lua = {
                 runtime = { version = "LuaJIT" },
                 diagnostics = {
-                  -- Recognize `vim` and `love` globals
                   globals = { "vim", "love" },
                 },
                 workspace = {
@@ -61,21 +58,38 @@ return {
           })
         end,
 
-
-        -- ESLint LSP
         ["eslint"] = function()
           require("lspconfig").eslint.setup({
             capabilities = capabilities,
-            -- Add any ESLint settings or on_attach logic here
+          })
+        end,
+
+        ["clangd"] = function()
+          require("lspconfig").clangd.setup({
+            capabilities = capabilities,
+            cmd = {
+              "clangd",
+              "--background-index",
+              "--clang-tidy",
+              "--completion-style=detailed",
+              "--cross-file-rename",
+              "--query-driver=/usr/bin/clang++,/usr/local/bin/clang++",
+              "--compile-commands-dir=./",
+            },
+            root_dir = function(fname)
+              return require("lspconfig.util").root_pattern(
+                "compile_commands.json",
+                ".git",
+                "WORKSPACE"
+              )(fname) or vim.fn.getcwd()
+            end,
           })
         end,
       },
     })
 
-    -- Completion config via nvim-cmp
+    -- Completion Config
     local cmp = require("cmp")
-    local cmp_select = { behavior = cmp.SelectBehavior.Select }
-
     require("luasnip.loaders.from_vscode").lazy_load()
 
     cmp.setup({

@@ -1,8 +1,6 @@
-neovim/plugged/
+# For testing plugins
+./playground.cpp
 
 .env
 
 **/.DS_Store
-
-# For testing plugins
-playground.cpp
