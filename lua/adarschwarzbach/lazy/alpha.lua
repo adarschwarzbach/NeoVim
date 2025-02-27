@@ -28,8 +28,8 @@ return {
       -- Centered quote and time block
       dashboard.section.footer.val = {
         "                                                     ",
-        "              'Ex nihilo nihil fit' - Parmenides     ",
-        "                      " .. os.date("%Y-%m-%d %H:%M:%S") .. "                      ",
+        "    'Aut inveniam viam aut faciam' - Hannibal of Carthage",
+        "                    " .. os.date("%Y-%m-%d %H:%M:%S") .. "                      ",
         "                                                     "
       }
 
